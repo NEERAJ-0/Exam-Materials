@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <link rel="stylesheet" type="text/css" href="assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <title>Subjects</title>
+</head>
+<body background="assets/img/banner.jpg">
+    <!-- Header -->
+    <header>
+        <h1>MOTHER THERESA INSTITUTE OF COMPUTER APPLICATIONS</h1>
+        <h2>MCA II SEMESTER -2024</h2>
+        <h3>EXAM MATERIALS</h3>
+    </header>
+    <i class="fa-solid fa-bars" id="sidebar-toggle"></i>
+
+    <!-- Main Container -->
+    <div class="main-container">
+        <!-- Sidebar Navigation -->
+        <nav class="sidebar">
+            <a href="index.html"><i class="fa-solid fa-house"></i></a>
+            <!-- <a href="subjects.html"><i class="fa-solid fa-arrow-left"></i></a> -->
+            <a href="#" class="nav-link" data-target="coor-content">COOR</a>
+            <a href="#" class="nav-link" data-target="ds-content">DS</a>
+            <a href="#" class="nav-link" data-target="dccn-content">DCCN</a>
+            <a href="#" class="nav-link" data-target="adbms-content">ADBMS</a>
+            <a href="#" class="nav-link" data-target="ecom-content">ECOM</a>
+        </nav>
+
+        <!-- Content Section -->
+        <section class="content-section1" id="content-section">
+            <!-- Default content, this can be empty or have a welcome message -->
+            <h3>Please select a subject to view the materials.</h3>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p class="footer-line">Copyright &copy; 2024 || All Rights Reserved.</p>
+        <p class="footer-line">designed by NEERAJ</p>
+    </footer>
+
+    <script>
+        // JavaScript to change the content based on the selected link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault(); // Prevent default anchor click behavior
+
+                // Get the target content id
+                const targetId = this.getAttribute('data-target');
+                
+                // Get the section element
+                const contentSection = document.getElementById('content-section');
+
+                // Change the content based on the targetId
+                if (targetId === 'coor-content') {
+                    contentSection.innerHTML = `
+                        <h1>MCA 201- Computer Oriented Operations Research</h1>
+                        <table class="styled-table">
+                            <thead>
+                                <tr>
+                                    <th>Files</th>
+                                    <th>Download</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>UNIT-I</td>
+                                    <td><a href="examfiles/COOR/MCA OR Unit I.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>UNIT-II</td>
+                                    <td><a href="examfiles/COOR/MCA OR Unit II.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>UNIT-III</td>
+                                    <td><a href="examfiles/COOR/MCA OR Unit III.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>UNIT-IV</td>
+                                    <td><a href="examfiles/COOR/MCA OR Unit IV.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>UNIT-V</td>
+                                    <td><a href="examfiles/COOR/MCA OR Unit V.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>UNIT-V(2)</td>
+                                    <td><a href="examfiles/COOR/MCA OR Unit V-Network scheduling.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    `;
+                } else if (targetId === 'ds-content') {
+                    contentSection.innerHTML = `
+                        <h1>MCA 202- Data Structures Using Java</h1>
+                        <table class="styled-table">
+                            <thead>
+                                <tr colspan="2">
+                                    <th>Files</th>
+                                    <th>Download</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>DS-MCA II SEM</td>
+                                    <td><a href="examfiles/DS/202 DS - MCA II SEM.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Data Structures and Algorithms</td>
+                                    <td><a href="examfiles/DS/Data Structures and Algorithms.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Data-structures-by-d-samantha</td>
+                                    <td><a href="examfiles/DS/Data-structures-by-d-samantha.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    `;
+                }else if (targetId === 'dccn-content') {
+                    contentSection.innerHTML = `
+                        <h1>MCA 203- Data Communication and Computer Networks</h1>
+                        <table class="styled-table">
+                            <thead>
+                                <tr colspan="2">
+                                    <th>Files</th>
+                                    <th>Download</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>DCCN-MCA II SEM</td>
+                                    <td><a href="examfiles/DCCN/203 DCCN - MCA II SEM.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>Data-Communications-and-Networking</td>
+                                    <td><a href="examfiles/DCCN/Data-Communications-and-Networking-By-Behrouz-A.Forouzan.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>DCCN Cryptography by HOD</td>
+                                    <td><a href="examfiles/DCCN/DCCN Cryptography by HOD.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>DCCN Notes by HOD</td>
+                                    <td><a href="examfiles/DCCN/DCCN Notes by HOD.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>DCCN Questions by HOD</td>
+                                    <td><a href="examfiles/DCCN/DCCN Questions by HOD.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>DCCN Unit 5-Topics</td>
+                                    <td><a href="examfiles/DCCN/DCCN Unit 5.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                                <tr>
+                                    <td>DCCN-Notes-MCA</td>
+                                    <td><a href="examfiles/DCCN/DCCN-Notes-MCA.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    `;
+                }else if (targetId === 'adbms-content') {
+                    contentSection.innerHTML = `
+                        <h1>MCA 204- Advanced Database Management Systems </h1>
+                        <table class="styled-table">
+                            <thead>
+                                <tr colspan="2">
+                                    <th>Files</th>
+                                    <th>Download</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>ADMS-MCA II SEM</td>
+                                    <td><a href="examfiles/ADBMS/204 ADMS - MCA II SEM.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>                               
+                            </tbody>
+                        </table>
+                    `;
+                }else if (targetId === 'ecom-content') {
+                    contentSection.innerHTML = `
+                        <h1>MCA 205A E-Commerce </h1>
+                        <table class="styled-table">
+                            <thead>
+                                <tr colspan="2">
+                                    <th>Files</th>
+                                    <th>Download</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>E-COMMERCE SEM II</td>
+                                    <td><a href="examfiles/ECOM/E-COMMERCE.pdf" download><i class="fa-solid fa-download"></i></a></td>
+                                </tr>                               
+                            </tbody>
+                        </table>
+                    `;
+                }
+            });
+        });
+        document.addEventListener('DOMContentLoaded', function () {
+        const sidebarToggle = document.getElementById('sidebar-toggle');
+        const sidebar = document.querySelector('.sidebar');
+        const mainContainer = document.querySelector('.main-container');
+
+        // Toggle sidebar visibility
+        sidebarToggle.addEventListener('click', function () {
+            sidebar.classList.toggle('open');
+            sidebarToggle.classList.toggle('open');
+        });
+
+        // Hide sidebar when clicking outside of it
+        document.addEventListener('click', function (e) {
+            if (!sidebar.contains(e.target) && !sidebarToggle.contains(e.target)) {
+                sidebar.classList.remove('open');
+                sidebarToggle.classList.remove('open');
+            }
+        });
+
+        // Hide sidebar when clicking on a subject
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', function () {
+                if (sidebar.classList.contains('open')) {
+                    sidebar.classList.remove('open');
+                    sidebarToggle.classList.remove('open');
+                }
+            });
+        });
+    });
+
+
+    </script>
+</body>
+</html>
