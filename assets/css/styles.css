@@ -1,0 +1,346 @@
+/* Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    bottom: 0;
+}
+
+/* Header Styles */
+header {
+    text-align: center;
+    background-color: #ffffffbf;
+    padding: 10px 0;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 28px;
+    color: #d50000;
+    margin: 5px 0;
+}
+
+header h2 {
+    font-size: 22px;
+    color: #006784;
+    margin: 3px 0;
+}
+
+header h3 {
+    font-size: 18px;
+    color: #006784;
+    margin: 2px 0;
+}
+
+/* Section Styles */
+.content-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60vh;
+    margin: 5px auto;
+}
+
+.tab {
+    width: 200px;
+    height: 150px;
+    background-color: #ffffff;
+    margin: 0 20px;
+    text-align: center;
+    line-height: 150px; /* Vertically center text */
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tab a {
+    display: block; /* Make the <a> tag block-level */
+    height: 100%;
+    width: 100%;
+    color: #006784;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    line-height: 150px; /* Vertically center text */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+section h1 {
+    font-size: 22px;
+    color: #00556c;
+    text-align: center;
+}
+
+section h3 {
+    color: #00556c;
+    text-align: center;
+}
+
+/* Footer Styles */
+footer {
+    text-align: center;
+    background-color: #ffffffbf;
+    color: #003544;
+    padding: 5px 0; /* Adjust padding for smaller footer height */
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.footer-line {
+    font-size: 12px;
+    margin: 0;
+    padding: 2px 0;
+    line-height: 1.2;
+}
+
+/* Hover Effect for Tabs */
+.tab:hover {
+    background-color: #ffffff6e;
+    cursor: pointer;
+}
+
+.fa-solid {
+    font-size: 20px;
+    color: #006784;
+}
+
+/* Main Container */
+.main-container {
+    display: flex;
+    height: calc(100vh - 180px); /* Adjusting based on the height of header and footer */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 200px;
+    background-color: #ffe5b4;
+    padding: 15px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 113px; /* Adjust top positioning to be below the header */
+    overflow-y: auto;
+    height: calc(100vh - 185px); /* Full height minus header and footer */
+}
+
+.sidebar a {
+    display: block;
+    margin: 10px 0;
+    color: #006784;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+    background-color: #ffd17d;
+    padding-left: 15px;
+    transition: all 0.3s ease;
+}
+
+/* Content Section Styles */
+.content-section1 {
+    flex: 1;
+    margin-left: 220px; /* Space for the sidebar */
+    margin-top: -10px;
+    padding: 20px;
+    background-color: #ffffff;
+    overflow-y: auto;
+    height: calc(100vh - 195px);
+}
+
+iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Table Styles */
+.styled-table {
+    width: 50%; /* Adjust width as needed */
+    margin: 20px auto; /* Center the table */
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: #ffffff;
+    border-radius: 8px;
+    overflow: hidden; /* Ensures border radius is applied */
+}
+
+.styled-table th,
+.styled-table td {
+    padding: 12px 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    color: #006784; /* Matching the color scheme */
+    font-size: 16px;
+}
+
+.styled-table th {
+    background-color: #f2f2f2; /* Light grey header */
+    font-weight: bold;
+    color: #003544; /* Darker color for contrast */
+}
+
+.styled-table i {
+    color: #d50000;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.styled-table i:hover {
+    color: #ff0000;
+}
+
+/* Responsive Design */
+@media only screen and (max-width: 768px) {
+    header h1 {
+        font-size: 24px;
+    }
+
+    header h2 {
+        font-size: 18px;
+    }
+
+    header h3 {
+        font-size: 16px;
+    }
+
+    .content-section {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .tab {
+        width: 50%;
+        margin: 10px 0;
+        line-height: 50px;
+    }
+
+    .sidebar {
+        width:fit-content;
+        position: relative;
+        height: auto;
+        top: 0;
+        margin-bottom: 20px;
+    }
+
+    .sidebar a {
+        text-align: center;
+        padding: 15px;
+    }
+
+    .main-container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .content-section1 {
+        margin-left: 0;
+        margin-top: 0;
+        padding: 10px;
+    }
+
+    .styled-table {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    iframe {
+        height: auto;
+    }
+
+    footer {
+        position: fixed;
+        bottom: 0;
+        margin-top: 20px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    header h1 {
+        font-size: 20px;
+    }
+
+    header h2 {
+        font-size: 16px;
+    }
+
+    header h3 {
+        font-size: 14px;
+    }
+
+    .tab {
+        line-height: 40px;
+    }
+
+    .styled-table th,
+    .styled-table td {
+        font-size: 12px;
+        padding: 6px;
+    }
+
+    .sidebar a {
+        font-size: 14px;
+    }
+
+    .fa-solid {
+        font-size: 16px;
+    }
+}
+
+/* Sidebar Toggle Icon */
+#sidebar-toggle {
+    display: none; /* Hide by default */
+}
+
+/* Show the sidebar toggle icon on mobile screens */
+@media only screen and (max-width: 768px) {
+    #sidebar-toggle {
+        display: block;
+        font-size: 24px;
+        color: #006784;
+        cursor: pointer;
+        position: relative;
+        
+    }
+
+    .sidebar {
+        display: none;
+        position: absolute;
+        top:inherit; /* Adjust top positioning */
+        left: 0;
+        width: fit-content;
+        height: calc(100vh - 60px);
+        background-color: #ffe5b4; /* Make sure background is set */
+    }
+
+    .sidebar.open {
+        display: block;
+    }
+
+    .main-container {
+        margin-left: 0;
+    }
+    /* Add styles for the cross icon */
+    #sidebar-toggle.open {
+        font-family: 'Font Awesome 5 Free'; /* Ensure Font Awesome is included */
+        font-weight: 900; /* Bold style for Font Awesome icon */
+    }
+
+    /* Hide the default menu icon when sidebar is open */
+    #sidebar-toggle.open::before {
+        content: "\f00d"; /* Font Awesome cross icon code */
+    }
+
+    /* Show the default menu icon when sidebar is closed */
+    #sidebar-toggle::before {
+        content: "\f0c9"; /* Font Awesome menu icon code */
+    }
+}
+
