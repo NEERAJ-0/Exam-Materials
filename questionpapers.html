@@ -28,6 +28,31 @@
             </tr>
         </thead>
         <tbody>
+            <tr data-date="2024-09-22">
+                <td>202 DS important questions<span class="new-label" style="display: none;">(New)</span></td>
+                <td><a href="examfiles/202 DS important questions.pdf" download><i class="fa-solid fa-download"></i></a></td>
+            </tr>
+            <tr data-date="2024-09-22">
+                <td>203 DCCN Important questions<span class="new-label" style="display: none;">(New)</span></td>
+                <td><a href="examfiles/203 DCCN Important questions.pdf" download><i class="fa-solid fa-download"></i></a></td>
+            </tr>
+            <tr data-date="2024-09-22">
+                <td>204 ADMS Improtant questions<span class="new-label" style="display: none;">(New)</span></td>
+                <td><a href="examfiles/204 ADMS Improtant questions.pdf" download><i class="fa-solid fa-download"></i></a></td>
+            </tr>
+            <tr data-date="2024-09-22">
+                <td>DCCN QUESTION PAPER<span class="new-label" style="display: none;">(New)</span></td>
+                <td><a href="examfiles/DCCN QUESTION PAPER.pdf" download><i class="fa-solid fa-download"></i></a></td>
+            </tr>
+            <tr data-date="2024-09-22">
+                <td>MCA-COOR-Important questions<span class="new-label" style="display: none;">(New)</span></td>
+                <td><a href="examfiles/MCA-COOR-Important questions.pdf" download><i class="fa-solid fa-download"></i></a></td>
+            </tr>
+            <tr data-date="2024-09-22">
+                <td>Question Paper 2023<span class="new-label" style="display: none;">(New)</span></td>
+                <td><a href="examfiles/Question Paper 2023.pdf" download><i class="fa-solid fa-download"></i></a></td>
+            </tr>
+            
             <tr>
                 <td>Previous papers sem II</td>
                 <td><a href="examfiles/Prevoius papers sem II.pdf" download><i class="fa-solid fa-download"></i></a></td>
@@ -54,6 +79,28 @@
         <p class="footer-line">Copyright &copy; 2024 || All Rights Reserved.</p>  
         <p class="footer-line">designed by NEERAJ</p>  
     </footer>
+    <script>
+        // Get the current date
+        const currentDate = new Date();
+
+        // Function to check if a date is within the last 3 or 4 days
+        function isNew(dateString) {
+            const addedDate = new Date(dateString);
+            const timeDifference = currentDate - addedDate;
+            const daysDifference = timeDifference / (1000 * 3600 * 24); // Convert milliseconds to days
+            return daysDifference <= 4; // Check if the PDF is new within 4 days
+        }
+
+        // Select all rows with the data-date attribute
+        const rows = document.querySelectorAll('tr[data-date]');
+
+        rows.forEach(row => {
+            const date = row.getAttribute('data-date');
+            if (isNew(date)) {
+                row.querySelector('.new-label').style.display = 'inline';
+            }
+        });
+    </script>
 
 </body>
 </html>
